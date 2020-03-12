@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Bellota+Text&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bellota&display=swap");
+.App {
+  font-family: "Bellota Text", cursive;
+  text-align: center;
+}
+
+body {
+  background-color: #fe605a;
+  margin: 0px;
+}
+
+#root {
+  display: flex;
+  color: #eef3dc;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-family: "Bellota Text", cursive;
+  font-size: 1.4em;
+}
+
+.App {
+  background-color: transparent;
+  width: 400px;
+  margin-top: 2rem;
+  display: grid;
+  justify-items: center;
+  border-radius: 10px;
+  /* box-shadow: 17px 15px 20px #0a0e0ee6; */
+  margin: 24px;
+}
+
+.add-todo {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 15px;
+}
+
+.add-btn {
+  background-color: #fa807c;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.add-todo input {
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-align: center;
+  color: #4e6467;
+  font-family: "Bellota", cursive;
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: #fe605a;
+  padding: 1px;
+  filter: brightness(125%);
+  height: 30px;
+}
+
+.todo-input::placeholder {
+  color: #b6d9d5;
+}
+
+.add-todo ::placeholder {
+  padding: 4px;
+}
+
+.todo-item-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-item {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 300px;
+  border: 2px solid #b6d9d5;
+  border-radius: 30px;
+  margin: 2px;
+  background-color: #fe605a;
+  font-size: 1.3rem;
+}
+
+.todo-item p {
+  margin-right: 40px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #b6d9d5;
+}
+
+.hide {
+  display: none;
+}
+
+.delete-btn {
+  margin: 5px;
+  margin-left: 10px;
+  width: 25px;
+  height: 30px;
+  border: 1px solid white;
+  background-color: white;
+  color: #fe605a;
+  font-weight: 600;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 0px;
+}
