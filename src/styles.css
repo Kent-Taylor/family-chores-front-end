@@ -116,6 +116,7 @@ select {
   background-image: none;
   outline: none;
   border: none;
+  text-align: center;
 }
 
 .dropdown-content {
@@ -189,7 +190,8 @@ select {
 }
 
 .todo-item p {
-  margin-left: 70px;
+  margin-left: 0px;
+  text-align: center;
 }
 
 .done {
