@@ -92,10 +92,18 @@ export default class TodoItem extends React.Component {
           {/* {this.state.category === this.state.pageView
             ? this.show(this.state.pageView)
             : null} */}
-
-          <p className={this.state.done ? "done" : null}>
-            {this.props.todoItem.title}
-          </p>
+          <div className="todo-text-container">
+            <p className={this.state.done ? "done" : null}>
+              {this.props.todoItem.title}
+            </p>
+          </div>
+          <i
+            class={
+              this.state.done
+                ? "fas fa-check done-check"
+                : "fas fa-check not-done-check"
+            }
+          />
         </div>
       </div>
     );

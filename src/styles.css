@@ -178,7 +178,7 @@ select {
 
 .todo-item {
   display: grid;
-  grid-template-columns: 1fr 7fr;
+  grid-template-columns: 1fr 7fr 1fr;
   align-items: center;
   justify-content: space-between;
   color: white;
@@ -191,12 +191,20 @@ select {
 }
 
 .todo-item p {
-  margin-right: 40px;
+  margin-left: 70px;
 }
 
 .done {
   text-decoration: line-through;
   color: #b6d9d5;
+}
+
+.done-check {
+  color: #b6d9d5;
+}
+
+.not-done-check {
+  color: rgba(209, 209, 209, 0.24);
 }
 
 .hide {
@@ -224,6 +232,10 @@ select {
 /* .burger-container {
   display: none;
 } */
+
+.todo-text-container {
+  display: flex;
+}
 
 .menuToggle {
   display: none;
