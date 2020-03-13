@@ -99,7 +99,7 @@ export default class Daily extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="root heading">Family Chores ></div>
+        <div className="root heading">Family Chores</div>
         <form onSubmit={this.handleSubmit} className="add-todo">
           <input
             className="todo-input"

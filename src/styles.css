@@ -52,7 +52,7 @@ body {
 }
 
 .heading {
-  font-family: "Bellota Text", cursive;
+  font-family: "Bellota", cursive;
   font-size: 1.4em;
 }
 
@@ -136,17 +136,15 @@ select {
   font-size: 1.3em;
   font-family: "Bellota", cursive;
   position: relative;
-  animation: pageView 1.8s;
+  animation: pageView 3s;
 }
 
 @keyframes pageView {
   from {
     opacity: 0;
-    top: -50px;
   }
   to {
     opacity: 1;
-    top: 0px;
   }
 }
 
@@ -196,7 +194,20 @@ select {
 
 .done {
   text-decoration: line-through;
-  color: #b6d9d5;
+  color: #b6d9d567;
+  position: relative;
+  animation: done 0.3s;
+}
+
+@keyframes done {
+  from {
+    color: white;
+    /* top: -50px; */
+  }
+  to {
+    color: #b6d9d567;
+    /* top: 0px; */
+  }
 }
 
 .done-check {
