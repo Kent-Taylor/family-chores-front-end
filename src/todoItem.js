@@ -1,5 +1,4 @@
 import React from "react";
-import ReactTooltip from "react-tooltip";
 
 export default class TodoItem extends React.Component {
   constructor(props) {
@@ -7,7 +6,8 @@ export default class TodoItem extends React.Component {
 
     this.state = {
       done: props.todoItem.done,
-      category: props.todoItem.category
+      category: props.category,
+      dropCategory: props.dropCategory
     };
   }
 
@@ -36,21 +36,43 @@ export default class TodoItem extends React.Component {
       .catch(error => console.log(error));
   };
 
+  show = value => {
+    switch (value) {
+      case "daily":
+        return <div>daily returned</div>;
+      case "weekly":
+        return <div>weekly returned</div>;
+      case "monthly":
+        return <div>monthly returned</div>;
+      default:
+        return console.log("not found");
+    }
+    // return (
+    //   <p className={this.state.done ? "done" : null}>
+    //     {this.state.category === "monthly" ? this.props.todoItem.title : null}
+    //   </p>
+    // );
+  };
+
   render() {
     return (
-      <div className="todo-item-wrapper">
+      <div
+        className={
+          this.state.category === this.state.dropCategory
+            ? "todo-item-wrapper"
+            : "hide"
+        }
+      >
         <div
           onClick={this.toggleDone}
           type="checkbox"
           defaultChecked={this.state.done}
           className={
-            this.state.category ===
-            "daily" /*this.state.category instead of "daily"*/
+            this.state.dropCategory === this.state.category
               ? "todo-item"
               : "hide"
           }
         >
-          <ReactTooltip />
           <div data-tip="Delete">
             <i
               className="delete-btn"
@@ -59,8 +81,20 @@ export default class TodoItem extends React.Component {
             />
           </div>
 
+          {/* {this.state.category === "daily"
+            ? this.show("daily")
+            : this.state.category === "weekly"
+            ? this.show("weekly")
+            : this.state.category === "monthly"
+            ? this.show("monthly")
+            : null} */}
+
+          {/* {this.state.category === this.state.pageView
+            ? this.show(this.state.pageView)
+            : null} */}
+
           <p className={this.state.done ? "done" : null}>
-            {this.state.category === "daily" ? this.props.todoItem.title : null}
+            {this.props.todoItem.title}
           </p>
         </div>
       </div>
