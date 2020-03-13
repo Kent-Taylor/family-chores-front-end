@@ -201,10 +201,30 @@ select {
 
 .done-check {
   color: #b6d9d5;
+  position: relative;
+  width: 20px;
+  animation: doneCheck 0.3s;
 }
 
 .not-done-check {
   color: rgba(209, 209, 209, 0.24);
+  width: 20px;
+}
+
+@keyframes doneCheck {
+  from {
+    opacity: 0;
+    font-size: 3em;
+    color: white;
+    /* top: -50px; */
+  }
+  to {
+    opacity: 1;
+    font-size: 1em;
+    color: #b6d9d5;
+
+    /* top: 0px; */
+  }
 }
 
 .hide {
