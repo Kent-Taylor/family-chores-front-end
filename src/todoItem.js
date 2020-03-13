@@ -52,12 +52,11 @@ export default class TodoItem extends React.Component {
         >
           <ReactTooltip />
           <div data-tip="Delete">
-            <button
+            <i
               className="delete-btn"
               onClick={() => this.props.deleteItem(this.props.todoItem.id)}
-            >
-              x
-            </button>
+              class="far fa-trash-alt"
+            />
           </div>
 
           <p className={this.state.done ? "done" : null}>

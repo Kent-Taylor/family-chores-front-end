@@ -43,11 +43,10 @@ body {
 }
 
 .add-btn {
-  background-color: #fa807c;
   outline: none;
   border: none;
   border-radius: 5px;
-  color: white;
+  color: #fe605a;
   font-weight: 600;
   font-size: 1.2em;
   cursor: pointer;
@@ -58,7 +57,7 @@ body {
   outline: none;
   border: none;
   text-align: center;
-  color: #4e6467;
+  color: white;
   font-family: "Bellota", cursive;
   font-size: 1.1em;
   font-weight: 600;

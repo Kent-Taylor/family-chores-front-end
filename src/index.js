@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 import ReactTooltip from "react-tooltip";
+// import Logo from "./images/chores-logo.png";
 
 import TodoItem from "./todoItem";
 
@@ -75,6 +76,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        {/* <Logo /> */}
         <div className="root heading">Family Chores</div>
         {/* TODO the list is currently rendering only categories of "daily". Create
             a dropdown or buttons or toggle to be able to toggle between categories */}
@@ -88,7 +90,7 @@ class App extends React.Component {
           />
           <p data-tip="Add to List">
             <button className="add-btn" type="submit">
-              +
+              <i class="far fa-plus-square" />
             </button>
           </p>
           <ReactTooltip />
