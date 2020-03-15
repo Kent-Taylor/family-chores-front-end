@@ -106,6 +106,13 @@ export default class Daily extends React.Component {
     });
   };
 
+  // clickChange = event => {
+  //   this.setState({
+  //     category: event.target.value,
+  //     dropCategory: event.target.value
+  //   });
+  // };
+
   render() {
     return (
       <div className="App">
@@ -119,7 +126,7 @@ export default class Daily extends React.Component {
             onChange={this.handleChange}
           />
           <div className="drop-container">
-            <div className="add-to-txt">Add to </div>
+            <div className="add-to-txt"> </div>
             <select className="dropdown" onChange={this.dropChange}>
               <option value="daily">Daily</option>
               <option value="weekly">Weekly</option>
@@ -129,7 +136,34 @@ export default class Daily extends React.Component {
           <button className="add-btn" type="submit">
             <i class="fas fa-plus" />
           </button>
-          <p className="page-view">{this.state.dropCategory}</p>
+          <div className="page-view-wrapper">
+            <p
+              className={
+                this.state.category === "daily" ? "page-view" : "page-view dim"
+              }
+              // onClick={this.clickChange}
+            >
+              daily
+            </p>
+            <p
+              className={
+                this.state.category === "weekly" ? "page-view" : "page-view dim"
+              }
+              // onClick={this.clickChange}
+            >
+              weekly
+            </p>{" "}
+            <p
+              className={
+                this.state.category === "monthly"
+                  ? "page-view"
+                  : "page-view dim"
+              }
+              // onClick={this.clickChange}
+            >
+              monthly
+            </p>
+          </div>
           <div className="render-view">{this.renderTodos()}</div>
 
           {this.state.isLoading ? (

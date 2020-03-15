@@ -119,6 +119,28 @@ select {
   text-align: center;
 }
 
+.dropdown {
+  font-family: "Bellota Text", cursive;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px 20px;
+  width: 120px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border: 1px solid white;
+  border-radius: 30px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: url("https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png"),
+    linear-gradient(to bottom, #da534f 100%, #e5e5e5 100%);
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%, 0 0;
+  background-size: 15px auto, 100%;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -133,11 +155,21 @@ select {
   display: block;
 }
 
+.page-view-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .page-view {
   font-size: 1.3em;
   font-family: "Bellota", cursive;
   position: relative;
   animation: pageView 3s;
+  margin: 15px;
+}
+
+.dim {
+  color: rgba(255, 255, 255, 0.287);
 }
 
 @keyframes pageView {
