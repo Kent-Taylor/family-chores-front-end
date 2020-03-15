@@ -54,6 +54,13 @@ export default class TodoItem extends React.Component {
     // );
   };
 
+  UNSAFE_componentWillReceiveProps(props) {
+    this.setState({
+      category: props.category,
+      dropCategory: props.dropCategory
+    }); // This will update your component.
+  }
+
   render() {
     return (
       <div
@@ -89,12 +96,18 @@ export default class TodoItem extends React.Component {
             ? this.show("monthly")
             : null} */}
 
-          {/* {this.state.category === this.state.pageView
+          {this.state.category === this.state.pageView
             ? this.show(this.state.pageView)
-            : null} */}
+            : null}
           <div className="todo-text-container">
             <p className={this.state.done ? "done" : null}>
-              {this.props.todoItem.title}
+              {this.props.todoItem.category === "monthly"
+                ? this.props.todoItem.title
+                : this.props.todoItem.category === "weekly"
+                ? this.props.todoItem.title
+                : this.props.todoItem.category === "daily"
+                ? this.props.todoItem.title
+                : null}
             </p>
           </div>
           <i

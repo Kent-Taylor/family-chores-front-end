@@ -22,7 +22,13 @@ export default class Daily extends React.Component {
   componentDidMount() {
     fetch("https://family-chores-evolved.herokuapp.com/todos")
       .then(response => response.json())
-      .then(data => this.setState({ todos: data, isLoading: false }));
+      .then(data =>
+        this.setState({
+          todos: data,
+          isLoading: false
+          // category: this.state.dropCategory
+        })
+      );
   }
 
   renderTodos = () => {
