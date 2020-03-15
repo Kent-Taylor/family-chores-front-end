@@ -125,9 +125,7 @@ export default class Daily extends React.Component {
           <p className="page-view">{this.state.dropCategory}</p>
           <div className="render-view">{this.renderTodos()}</div>
 
-          {this.state.isLoading ? (
-            <i class="fas fa-yin-yang loader" spin />
-          ) : null}
+          {this.state.isLoading ? <i class="fas fa-yin-yang loader" /> : null}
         </form>
       </div>
     );
