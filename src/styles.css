@@ -261,8 +261,45 @@ select {
   padding: 0px;
 }
 
+.washing-machine {
+  display: flex;
+  flex-direction: column;
+  background-color: #b6d9d5;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding-top: 10px;
+  /* box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); */
+}
+
+.washer-button {
+  margin: 0px;
+  color: white;
+  position: relative;
+  animation: washerButton 1.5s infinite;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  margin-left: 30px;
+}
+
+@keyframes washerButton {
+  0% {
+    transform: scale(0.3);
+    color: #b6d9d5;
+  }
+  50% {
+    color: #caf0eb;
+  }
+  100% {
+    transform: scale(1);
+    color: white;
+  }
+}
+
 .loader {
-  font-size: 2em;
+  /* font-size: 2em; */
+  width: 65px;
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }

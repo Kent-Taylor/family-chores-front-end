@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 
 import TodoItem from "./todoItem";
+import washer from "./images/washer.png";
 
 import "./styles.css";
 
@@ -125,7 +126,12 @@ export default class Daily extends React.Component {
           <p className="page-view">{this.state.dropCategory}</p>
           <div className="render-view">{this.renderTodos()}</div>
 
-          {this.state.isLoading ? <i class="fas fa-yin-yang loader" /> : null}
+          {this.state.isLoading ? (
+            <div className="washing-machine">
+              <div className="washer-button">O</div>
+              <img src={washer} className="loader" alt="Loading..." />
+            </div>
+          ) : null}
         </form>
       </div>
     );
