@@ -11,7 +11,7 @@
   border-radius: 10px;
   /* box-shadow: 17px 15px 20px #0a0e0ee6; */
   margin: 24px;
-  margin-top: 0;
+  margin-top: 10;
   /* height: 100vh; */
 }
 
@@ -163,9 +163,14 @@ select {
 .page-view {
   font-size: 1.3em;
   font-family: "Bellota", cursive;
+  color: white;
   position: relative;
   animation: pageView 3s;
   margin: 15px;
+  border: none;
+  background-color: #fe605a;
+  text-decoration: none;
+  outline: none;
 }
 
 .dim {

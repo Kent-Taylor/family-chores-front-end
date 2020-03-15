@@ -106,10 +106,10 @@ export default class Daily extends React.Component {
     });
   };
 
-  // clickChange = event => {
+  // clickChange = often => {
   //   this.setState({
-  //     category: event.target.value,
-  //     dropCategory: event.target.value
+  //     category: often,
+  //     dropCategory: often
   //   });
   // };
 
@@ -125,44 +125,56 @@ export default class Daily extends React.Component {
             value={this.state.todo}
             onChange={this.handleChange}
           />
-          <div className="drop-container">
+          {/* <div className="drop-container">
             <div className="add-to-txt"> </div>
             <select className="dropdown" onChange={this.dropChange}>
               <option value="daily">Daily</option>
               <option value="weekly">Weekly</option>
               <option value="monthly">Monthly</option>
             </select>
-          </div>
+          </div> */}
           <button className="add-btn" type="submit">
             <i class="fas fa-plus" />
           </button>
           <div className="page-view-wrapper">
-            <p
+            <button
+              type="button"
+              return
+              false
               className={
                 this.state.category === "daily" ? "page-view" : "page-view dim"
               }
-              // onClick={this.clickChange}
+              value="daily"
+              onClick={this.dropChange}
             >
               daily
-            </p>
-            <p
+            </button>
+            <button
+              type="button"
+              return
+              false
               className={
                 this.state.category === "weekly" ? "page-view" : "page-view dim"
               }
-              // onClick={this.clickChange}
+              value="weekly"
+              onClick={this.dropChange}
             >
               weekly
-            </p>{" "}
-            <p
+            </button>{" "}
+            <button
+              type="button"
+              return
+              false
               className={
                 this.state.category === "monthly"
                   ? "page-view"
                   : "page-view dim"
               }
-              // onClick={this.clickChange}
+              value="monthly"
+              onClick={this.dropChange}
             >
               monthly
-            </p>
+            </button>
           </div>
           <div className="render-view">{this.renderTodos()}</div>
 
