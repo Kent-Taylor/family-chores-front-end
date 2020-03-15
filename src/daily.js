@@ -13,14 +13,15 @@ export default class Daily extends React.Component {
       todo: "",
       todos: [],
       category: "daily", // remember to set the category
-      dropCategory: "daily"
+      dropCategory: "daily",
+      isLoading: true
     };
   }
 
   componentDidMount() {
     fetch("https://family-chores-evolved.herokuapp.com/todos")
       .then(response => response.json())
-      .then(data => this.setState({ todos: data }));
+      .then(data => this.setState({ todos: data, isLoading: false }));
   }
 
   renderTodos = () => {
@@ -40,13 +41,15 @@ export default class Daily extends React.Component {
   getCategory = () => {
     fetch(`https://family-chores-evolved.herokuapp.com/todos`, {
       method: "get"
-    }).then(
+    }).then(response => {
+      console.log("gettting", response.data);
+
       this.setState({
         testCategory: this.state.todos.filter(item => {
           return item.category;
         })
-      })
-    );
+      });
+    });
   };
 
   handleChange = event => {
@@ -121,6 +124,10 @@ export default class Daily extends React.Component {
           </button>
           <p className="page-view">{this.state.dropCategory}</p>
           <div className="render-view">{this.renderTodos()}</div>
+
+          {this.state.isLoading ? (
+            <i class="fas fa-yin-yang loader" spin />
+          ) : null}
         </form>
       </div>
     );
