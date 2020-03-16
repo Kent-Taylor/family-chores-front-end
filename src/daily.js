@@ -4,6 +4,7 @@ import axios from "axios";
 import TodoItem from "./todoItem";
 import washer from "./images/washer.png";
 import Logo from "./images/logo.png";
+import moment from "moment";
 
 import "./styles.css";
 
@@ -17,7 +18,16 @@ export default class Daily extends React.Component {
       category: "daily", // remember to set the category
       dropCategory: "daily",
       isLoading: true,
-      newChore: false
+      newChore: false,
+      oneDay: moment()
+        .endOf("day")
+        .fromNow(),
+      oneWeek: moment()
+        .endOf("week")
+        .fromNow(),
+      oneMonth: moment()
+        .endOf("month")
+        .fromNow()
     };
   }
 
@@ -35,6 +45,7 @@ export default class Daily extends React.Component {
 
   renderTodos = () => {
     return this.state.todos.map(todo => {
+      // this.getTime();
       return (
         <TodoItem
           key={todo.id}
@@ -114,12 +125,20 @@ export default class Daily extends React.Component {
     });
   };
 
-  // UNSAFE_componentDidUpdate() {
+  // getTime = event => {
+  //   let addOneDay = moment()
+  //     .endOf("day")
+  //     .fromNow();
+  //   let fromNow = moment()
+  //     .endOf("month")
+  //     .fromNow();
+
   //   this.setState({
-  //     newChore: true
+  //     oneDay: addOneDay,
+  //     oneMonth: fromNow
   //   });
-  //   console.log("did update");
-  // }
+  //   // event.preventDefault();
+  // };
 
   render() {
     return (
@@ -180,6 +199,18 @@ export default class Daily extends React.Component {
             >
               monthly
             </button>
+          </div>
+          <div className="countdown">
+            <p>
+              due{" "}
+              {this.state.category === "daily"
+                ? this.state.oneDay
+                : this.state.category === "weekly"
+                ? this.state.oneWeek
+                : this.state.category === "monthly"
+                ? this.state.oneMonth
+                : null}
+            </p>
           </div>
           <div className="render-view">{this.renderTodos()}</div>
 
