@@ -165,6 +165,7 @@ select {
   position: relative;
   animation: pageView 3s;
   margin: 15px;
+  padding: 0px;
   border: none;
   background-color: #fe605a;
   text-decoration: none;
