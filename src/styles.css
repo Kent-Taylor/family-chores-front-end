@@ -88,6 +88,7 @@ body {
   color: #adceca;
   font-size: 3em;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .todo-input::placeholder {
@@ -119,45 +120,9 @@ select {
   text-align: center;
 }
 
-.dropdown {
-  font-family: "Bellota Text", cursive;
-  font-size: 16px;
-  color: #ffffff;
-  padding: 10px 20px;
-  width: 120px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  border: 1px solid white;
-  border-radius: 30px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  background-color: #fff;
-  background-image: url("https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png"),
-    linear-gradient(to bottom, #da534f 100%, #e5e5e5 100%);
-  background-repeat: no-repeat;
-  background-position: right 15px top 50%, 0 0;
-  background-size: 15px auto, 100%;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 .page-view-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .page-view {
