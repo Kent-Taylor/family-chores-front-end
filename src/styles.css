@@ -11,7 +11,7 @@
   border-radius: 10px;
   /* box-shadow: 17px 15px 20px #0a0e0ee6; */
   margin: 24px;
-  margin-top: 10;
+  margin-top: 0;
   /* height: 100vh; */
 }
 
@@ -29,6 +29,12 @@ body {
   color: #eef3dc;
   justify-content: center;
   align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 100px;
+  margin: 0px;
 }
 
 .center {

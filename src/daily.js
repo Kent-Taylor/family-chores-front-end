@@ -3,6 +3,7 @@ import axios from "axios";
 
 import TodoItem from "./todoItem";
 import washer from "./images/washer.png";
+import Logo from "./images/logo.png";
 
 import "./styles.css";
 
@@ -116,7 +117,9 @@ export default class Daily extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="root heading">Family Chores</div>
+        <div className="root heading">
+          <img className="logo" src={Logo} alt="Family Chores" />
+        </div>
         <form onSubmit={this.handleSubmit} className="add-todo">
           <input
             className="todo-input"
