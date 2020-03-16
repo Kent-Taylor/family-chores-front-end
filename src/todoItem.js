@@ -36,29 +36,11 @@ export default class TodoItem extends React.Component {
       .catch(error => console.log(error));
   };
 
-  show = value => {
-    switch (value) {
-      case "daily":
-        return <div>daily returned</div>;
-      case "weekly":
-        return <div>weekly returned</div>;
-      case "monthly":
-        return <div>monthly returned</div>;
-      default:
-        return console.log("not found");
-    }
-    // return (
-    //   <p className={this.state.done ? "done" : null}>
-    //     {this.state.category === "monthly" ? this.props.todoItem.title : null}
-    //   </p>
-    // );
-  };
-
   UNSAFE_componentWillReceiveProps(props) {
     this.setState({
       category: props.category,
       dropCategory: props.dropCategory
-    }); // This will update your component.
+    });
   }
 
   render() {
@@ -87,14 +69,6 @@ export default class TodoItem extends React.Component {
               class="far fa-trash-alt"
             />
           </div>
-
-          {/* {this.state.category === "daily"
-            ? this.show("daily")
-            : this.state.category === "weekly"
-            ? this.show("weekly")
-            : this.state.category === "monthly"
-            ? this.show("monthly")
-            : null} */}
 
           {this.state.category === this.state.pageView
             ? this.show(this.state.pageView)

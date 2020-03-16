@@ -16,7 +16,8 @@ export default class Daily extends React.Component {
       todos: [],
       category: "daily", // remember to set the category
       dropCategory: "daily",
-      isLoading: true
+      isLoading: true,
+      newChore: false
     };
   }
 
@@ -107,12 +108,18 @@ export default class Daily extends React.Component {
     });
   };
 
-  // clickChange = often => {
+  clickAdd = () => {
+    this.setState({
+      newChore: true
+    });
+  };
+
+  // UNSAFE_componentDidUpdate() {
   //   this.setState({
-  //     category: often,
-  //     dropCategory: often
+  //     newChore: true
   //   });
-  // };
+  //   console.log("did update");
+  // }
 
   render() {
     return (
@@ -121,24 +128,19 @@ export default class Daily extends React.Component {
           <img className="logo" src={Logo} alt="Family Chores" />
         </div>
         <form onSubmit={this.handleSubmit} className="add-todo">
-          <input
-            className="todo-input"
-            type="text"
-            placeholder="New Chore"
-            value={this.state.todo}
-            onChange={this.handleChange}
-          />
-          {/* <div className="drop-container">
-            <div className="add-to-txt"> </div>
-            <select className="dropdown" onChange={this.dropChange}>
-              <option value="daily">Daily</option>
-              <option value="weekly">Weekly</option>
-              <option value="monthly">Monthly</option>
-            </select>
-          </div> */}
-          <button className="add-btn" type="submit">
-            <i class="fas fa-plus" />
-          </button>
+          <div className="add-wrapper">
+            <input
+              type="text"
+              placeholder="Type a New Chore..."
+              value={this.state.todo}
+              onChange={this.handleChange}
+              className="todo-input"
+            />
+
+            <button className="add-btn" type="submit" onClick={this.clickAdd}>
+              <i class={this.state.todo ? "fas fa-plus" : "hide"} />
+            </button>
+          </div>
           <div className="page-view-wrapper">
             <button
               type="button"
