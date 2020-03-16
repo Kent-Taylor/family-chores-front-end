@@ -131,7 +131,7 @@ export default class Daily extends React.Component {
           <div className="add-wrapper">
             <input
               type="text"
-              placeholder="Type a New Chore..."
+              placeholder="enter a new chore..."
               value={this.state.todo}
               onChange={this.handleChange}
               className="todo-input"
