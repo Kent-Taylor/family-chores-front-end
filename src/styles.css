@@ -184,6 +184,11 @@ select {
   }
 }
 
+.countdown p {
+  font-family: "Bellota", cursive;
+  color: white;
+}
+
 .render-view {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -360,128 +365,99 @@ select {
   }
 }
 
-/* hamburger */
-
-/* .burger-container {
-  display: none;
-} */
-
 .todo-text-container {
   display: flex;
 }
 
-.menuToggle {
-  display: none;
-  position: relative;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
+/* Authorization Login Page */
+
+.login-page-container {
+  font-family: "Bellota Text", cursive;
+  display: grid;
+  grid-template-columns: 1fr 0.001fr 1fr;
+  gap: 5px;
+  width: 60vw;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 42px;
 }
 
-.menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 2;
-  -webkit-touch-callout: none;
-}
-
-.menuToggle span {
-  display: block;
-  width: 32px;
-  height: 4px;
-  margin-bottom: 5px;
-  margin-left: 20px;
-  position: relative;
-  background: #818aa3;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-}
-
-.menuToggle span:first-child {
-  transform-origin: 0% 0%;
-}
-
-.menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-}
-
-.menuToggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #f5f2b8;
-}
-
-.menuToggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-.menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-.menu {
+.left-side {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  position: absolute;
-  width: 300px;
-  height: auto;
-  margin: -45px 0 0 -10px;
-  padding: 50px 0px 10px 0px;
-  background: #a491d3;
-  border-radius: 5px;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  box-shadow: 18px 17px 26px -12px rgba(0, 0, 0, 0.75);
-}
-
-.line {
-  color: #c5dca0;
-  height: 42px;
-  transform: rotate(-45deg);
-}
-
-.letter-button {
-  text-decoration: none;
-  outline: none;
-  padding: 10px;
-  width: 100%;
   color: white;
-  background: #a491d3;
-  border: 1px solid #f9dad0;
-  border-right: none;
-  border-radius: 0px;
-  font-size: 1.2em;
-  transition: 0.2s ease-in-out;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 100%;
+  border-radius: 30px;
+}
+.credentials-wrapper {
+  margin: 200px;
+  font-family: inherit;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+}
+
+.credentials-wrapper input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #b6d9d5;
+  background-color: #fe605a;
+  text-align: center;
+  color: white;
+  font-family: "Bellota", cursive;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 8px;
+  height: 30px;
+  margin: 10px;
+}
+
+.credentials-wrapper input::placeholder {
+  color: white;
+}
+
+.credentials-wrapper p {
+  font-family: "Bellota", cursive;
+
+  color: white;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.divider {
+  height: 80vh;
+  background-color: white;
+  color: white;
+  width: 2px;
+}
+
+.common-button {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 150px;
+  border: 2px solid #b6d9d5;
+  border-radius: 30px;
+  margin: 20px;
+  background-color: #fe605a;
+  font-size: 1.3rem;
+  outline: none;
   cursor: pointer;
-}
-
-.letter-button:hover {
-  outline: none;
-  width: 100%;
-  color: white;
-  background: #8463da;
-  border: 1px solid #f9dad0;
-  font-size: 1.2em;
-}
-
-.menu li {
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-.menuToggle input:checked ~ ul {
-  transform: none;
 }

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Daily from "./daily";
+import Auth from "./auth";
 
 import "./styles.css";
 
@@ -13,6 +14,7 @@ class Index extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Daily} />
+            <Route path="/auth" component={Auth} />
           </Switch>
         </BrowserRouter>
       </div>
