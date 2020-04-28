@@ -31,6 +31,13 @@ body {
   align-items: center;
 }
 
+.tilt {
+  border: 2px solid white;
+  background-color: blue;
+  height: 300px;
+  width: 300px;
+}
+
 .logo {
   width: 150px;
   height: 100px;
@@ -194,6 +201,7 @@ select {
   overflow-y: scroll;
   position: relative;
   animation: renderView 2s;
+  overflow: hidden;
 }
 
 @keyframes renderView {
@@ -213,6 +221,7 @@ select {
   align-items: center;
   overflow-x: hidden;
   overflow-y: scroll;
+  overflow: hidden;
 }
 
 .todo-item {

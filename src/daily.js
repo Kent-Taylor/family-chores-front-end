@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+// import Tilt from "./tilt";
+
 import TodoItem from "./todoItem";
 import washer from "./images/washer.png";
 import Logo from "./images/logo.png";
@@ -212,6 +214,7 @@ export default class Daily extends React.Component {
                 : null}
             </p>
           </div>
+
           <div className="render-view">{this.renderTodos()}</div>
 
           {this.state.isLoading ? (
